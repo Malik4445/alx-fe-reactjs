@@ -1,11 +1,13 @@
-// src/components/MainContent.jsx
+// src/components/UserProfile.jsx
 
-function MainContent() {
+const UserProfile = (props) => {
     return (
-        <main>
-            <p>I love to visit New York, Paris, and Tokyo.</p>
-        </main>
+        <div>
+            <h2>{props.name}</h2>
+            <p>Age: {props.age}</p>
+            <p>Bio: {props.bio}</p>
+        </div>
     );
-}
+};
 
-export default MainContent;
+export default UserProfile;
