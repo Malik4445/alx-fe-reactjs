@@ -1,3 +1,5 @@
+import ProfilePage from './ProfilePage';
+import { UserContext } from './UserContext';
 import Header from './components/Header';
 import MainContent from './components/MainContent';
 import Footer from './components/Footer';
@@ -8,12 +10,18 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+
+
 function App() {
   const [count, setCount] = useState(0)
+  const userData = { name: "Jane Doe", email: "jane.doe@example.com" };
 
   return (
     <>
       <div>
+        <UserContext.Provider value={userData}>
+      <ProfilePage />
+    </UserContext.Provider>
          <Header />
          <MainContent />
           <WelcomeMessage />
