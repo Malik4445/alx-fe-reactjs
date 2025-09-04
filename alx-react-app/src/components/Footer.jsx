@@ -1,8 +1,9 @@
 // src/components/Footer.jsx
+// src/components/Footer.jsx
 
 function Footer() {
     return (
-        <footer>
+        <footer style={{ backgroundColor: '#333', color: 'white', padding: '10px', textAlign: 'center', position: 'flexible', bottom: '0', width: '100%' }}>
             <p>© 2023 City Lovers</p>
         </footer>
     );

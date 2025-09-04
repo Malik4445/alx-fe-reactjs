@@ -16,13 +16,13 @@ function App() {
       <div>
          <Header />
          <MainContent />
-         <Footer />
           <WelcomeMessage />
-          <UserProfile 
-        name="Alice" 
-        age="25" 
-        bio="Loves hiking and photography" 
-      />
+          <UserProfile  
+         name="Alice" 
+         age="25" 
+         bio="Loves hiking and photography" 
+          />
+      <Footer />
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
