@@ -1,7 +1,5 @@
-// src/components/UserDetails.jsx
-
 import { useContext } from 'react';
-import { UserContext } from '../../alx-react-app-props/src/UserContext'; // This is the corrected path
+import { UserContext } from './UserContext';
 
 function UserDetails() {
   const userData = useContext(UserContext);
