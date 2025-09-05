@@ -19,9 +19,7 @@ function App() {
   return (
     <>
       <div>
-        <UserContext.Provider value={userData}>
-      <ProfilePage />
-    </UserContext.Provider>
+         <ProfilePage userData={userData} />
          <Header />
          <MainContent />
           <WelcomeMessage />

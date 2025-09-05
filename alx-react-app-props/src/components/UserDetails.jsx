@@ -1,7 +1,7 @@
 // src/UserDetails.jsx
 
 import { useContext } from 'react';
-import { UserContext } from '../UserContext';
+import { UserContext } from './UserContext';
 
 function UserDetails() {
   // Use useContext to get the data from the provider
