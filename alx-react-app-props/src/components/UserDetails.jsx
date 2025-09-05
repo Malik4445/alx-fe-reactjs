@@ -1,5 +1,7 @@
+// src/components/UserDetails.jsx
+
 import { useContext } from 'react';
-import { UserContext } from './UserContext';
+import { UserContext } from '../UserContext'; // This is the corrected path
 
 function UserDetails() {
   const userData = useContext(UserContext);
