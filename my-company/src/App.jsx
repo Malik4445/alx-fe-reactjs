@@ -3,7 +3,7 @@ import Home from './Home';
 import About from './About';
 import Services from './Services';
 import Contact from './Contact';
-import Navbar from './NavBar';
+import Navbar from './components/Navbar'; // ✅ Correct path
 import Footer from './Footer';
 
 function App() {
@@ -13,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/Navbar " element={<component Navbar />} />
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/footer" element={<Footer />} />
