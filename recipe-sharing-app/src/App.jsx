@@ -1,5 +1,5 @@
-import AddRecipeForm from './AddRecipeForm';
-import RecipeList from './RecipeList';
+import AddRecipeForm from './components/AddRecipeForm';
+import RecipeList from './components/RecipeList';
 import './App.css'; // You can remove this if not needed
 
 function App() {
