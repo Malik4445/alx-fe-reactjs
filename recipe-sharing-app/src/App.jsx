@@ -2,7 +2,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AddRecipeForm from './components/AddRecipeForm';
 import RecipeList from './components/RecipeList';
 import RecipeDetails from './components/RecipeDetails';
-import SearchBar from './components/SearchBar'; // Import the new component
+import SearchBar from './components/SearchBar';
+import FavoritesList from './components/FavoritesList'; // Import the new component
+import RecommendationsList from './components/RecommendationsList'; // Import the new component
 
 function App() {
   return (
@@ -12,9 +14,17 @@ function App() {
         <Routes>
           <Route path="/" element={
             <>
-              <SearchBar /> // Add the SearchBar here
+              <SearchBar />
               <AddRecipeForm />
-              <RecipeList />
+              <div style={{ display: 'flex', gap: '20px' }}>
+                <div style={{ flex: 1 }}>
+                  <RecipeList />
+                </div>
+                <div style={{ flex: 1 }}>
+                  <FavoritesList />
+                  <RecommendationsList />
+                </div>
+              </div>
             </>
           } />
           <Route path="/recipes/:id" element={<RecipeDetails />} />
