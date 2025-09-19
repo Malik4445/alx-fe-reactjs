@@ -3,7 +3,7 @@ import axios from 'axios';
 const GITHUB_TOKEN = import.meta.env.VITE_APP_GITHUB_TOKEN;
 
 // Advanced search for users using GitHub Search API
-export const fetchAdvancedUsers = async (username, location, minRepos) => {
+export const fetchUserData = async (username, location, minRepos) => {
   let query = '';
   if (username) query += `${username} in:login`;
   if (location) query += ` location:${location}`;
