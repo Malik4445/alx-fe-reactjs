@@ -4,4 +4,6 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
 	plugins: [react()],
 })
+// Tailwind CSS is configured via PostCSS (see postcss.config.js)
+// tailwindcss
 
