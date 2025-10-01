@@ -2,25 +2,66 @@
   {
     "id": 1,
     "title": "Spaghetti Carbonara 🍝",
-    "summary": "A classic Roman pasta dish with a creamy sauce made from eggs, hard cheese, cured pork (guanciale or pancetta), and black pepper. Ready in under 30 minutes!",
-    "image": "https://images.unsplash.com/photo-1595185918734-70e64c12579b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "summary": "A classic Roman pasta dish with a creamy sauce made from eggs, hard cheese, cured pork, and black pepper. Ready in under 30 minutes!",
+    "image": "https://images.unsplash.com/photo-1595185918734-70e64c12579b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "ingredients": [
+      "300g Spaghetti or rigatoni",
+      "150g Guanciale (or pancetta)",
+      "2 large Egg yolks",
+      "50g Pecorino Romano cheese, grated",
+      "Freshly ground black pepper"
+    ],
+    "instructions": [
+      "Cook pasta according to package directions until al dente.",
+      "While pasta cooks, cut guanciale into small cubes and cook in a pan over medium heat until crispy. Remove from heat, reserving the fat.",
+      "In a bowl, whisk egg yolks, Pecorino cheese, and generous amount of black pepper.",
+      "Drain the pasta, reserving some pasta water.",
+      "Quickly toss the hot pasta with the egg/cheese mixture and a spoonful of the reserved guanciale fat (and a splash of pasta water if needed) off the heat to create a creamy sauce. Do not put back on heat or the eggs will scramble.",
+      "Serve immediately, topped with crispy guanciale and more black pepper."
+    ]
   },
   {
     "id": 2,
     "title": "Chicken Tikka Masala 🍛",
-    "summary": "Chunks of grilled chicken (tikka) cooked in a smooth, buttery, and creamy tomato-based gravy. A rich and flavorful comfort food often served with naan.",
-    "image": "https://images.unsplash.com/photo-1589302525624-9b24e62842ac?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "summary": "Chunks of grilled chicken cooked in a smooth, buttery, and creamy tomato-based gravy. A rich and flavorful comfort food often served with naan.",
+    "image": "https://images.unsplash.com/photo-1589302525624-9b24e62842ac?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "ingredients": [
+      "1 lb chicken breast, cubed",
+      "1 cup plain yogurt",
+      "2 tbsp Tikka Masala paste",
+      "1 can (14.5 oz) crushed tomatoes",
+      "1/2 cup heavy cream",
+      "1 tbsp ginger-garlic paste"
+    ],
+    "instructions": [
+      "Marinate chicken with yogurt and half of the tikka masala paste for at least 30 minutes.",
+      "Grill or bake the marinated chicken until cooked through.",
+      "In a large pot, sauté ginger-garlic paste until fragrant.",
+      "Add remaining tikka masala paste and crushed tomatoes. Simmer for 10 minutes.",
+      "Stir in the heavy cream and the cooked chicken. Simmer for another 5 minutes.",
+      "Serve hot with rice or naan."
+    ]
   },
   {
     "id": 3,
     "title": "Vegan Black Bean Burgers 🍔",
     "summary": "Hearty, homemade black bean burgers that are packed with flavor and texture. A perfect meatless alternative for grilling or pan-frying. High in fiber and protein.",
-    "image": "https://images.unsplash.com/photo-1543169733-a859d9c228d4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  },
-  {
-    "id": 4,
-    "title": "Overnight Oats with Berries 🍓",
-    "summary": "A simple, no-cook breakfast. Oats soaked in milk (or alternative) overnight, topped with fresh berries, nuts, and a drizzle of maple syrup. Great for meal prep.",
-    "image": "https://images.unsplash.com/photo-1583569528022-794c9693c06d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "image": "https://images.unsplash.com/photo-1543169733-a859d9c228d4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "ingredients": [
+      "1 can (15 oz) black beans, rinsed and drained",
+      "1/2 cup breadcrumbs",
+      "1/4 cup finely chopped onion",
+      "1 tbsp soy sauce or tamari",
+      "1 tsp cumin",
+      "Salt and pepper to taste"
+    ],
+    "instructions": [
+      "Preheat oven to 375°F (190°C).",
+      "Mash black beans in a bowl until mostly smooth but still chunky.",
+      "Mix in breadcrumbs, onion, soy sauce, cumin, salt, and pepper.",
+      "Form the mixture into 4 burger patties.",
+      "Place patties on a lined baking sheet and bake for 10 minutes, flip, and bake for another 10 minutes.",
+      "Serve on buns with your favorite toppings."
+    ]
   }
 ]

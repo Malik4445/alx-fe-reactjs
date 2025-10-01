@@ -1,27 +1,21 @@
 import React, { useState, useEffect } from 'react';
-// Correct import path for the JSON file relative to the component
+import { Link } from 'react-router-dom'; 
 import mockRecipes from '../data.json'; 
 
 const HomePage = () => {
   const [recipes, setRecipes] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // Load data using useEffect
   useEffect(() => {
-    // Simulate an async data fetch, even though the data is local
     const loadRecipes = () => {
-      // In a real app, you would use 'fetch' here.
-      // E.g., fetch('/api/recipes').then(res => res.json()).then(data => setRecipes(data));
-      
-      // Simulating a network delay for better UI experience
       setTimeout(() => {
         setRecipes(mockRecipes); 
         setLoading(false);
-      }, 500); // 0.5 second delay
+      }, 500);
     };
 
     loadRecipes();
-  }, []); // Run only once on mount
+  }, []);
 
   if (loading) {
     return (
@@ -43,7 +37,6 @@ const HomePage = () => {
         </p>
       </header>
       
-      {/* Recipe Grid Layout (Step 4: Responsive Design) */}
       <div className="grid gap-6 sm:gap-8 
                       grid-cols-1 
                       sm:grid-cols-2 
@@ -51,8 +44,8 @@ const HomePage = () => {
                       xl:grid-cols-4">
         
         {recipes.map(recipe => (
-          // Recipe Card Styling
-          <div 
+          <Link 
+            to={`/recipe/${recipe.id}`} // Navigate to /recipe/:id
             key={recipe.id} 
             className="bg-white 
                        rounded-xl 
@@ -63,44 +56,39 @@ const HomePage = () => {
                        hover:scale-[1.03] 
                        transition duration-300 
                        ease-in-out 
-                       cursor-pointer"
+                       group block"
           >
-            {/* Recipe Image */}
             <div className="h-48 overflow-hidden">
                 <img 
-                    className="w-full h-full object-cover" 
+                    className="w-full h-full object-cover 
+                                group-hover:opacity-90 transition duration-300" 
                     src={recipe.image} 
                     alt={recipe.title} 
                 />
             </div>
 
             <div className="p-5">
-              {/* Recipe Title */}
               <h2 className="text-xl font-bold text-gray-800 mb-2 truncate">
                 {recipe.title}
               </h2>
-              
-              {/* Summary */}
               <p className="text-gray-600 text-sm mb-4 line-clamp-3 h-14">
                 {recipe.summary}
               </p>
               
-              {/* Detail Link (Call to Action) */}
-              <button 
-                className="w-full 
+              <div 
+                className="w-full text-center
                            bg-indigo-600 
                            text-white 
                            py-2 
                            rounded-lg 
                            font-semibold 
-                           hover:bg-indigo-700 
+                           group-hover:bg-indigo-700 
                            transition duration-150"
-                onClick={() => alert(`Navigating to details for: ${recipe.title}`)}
               >
                 View Recipe Details
-              </button>
+              </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
