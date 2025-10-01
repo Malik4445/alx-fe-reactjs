@@ -16,7 +16,7 @@ function App() {
         <Route path="/add" element={<AddRecipeForm />} /> {/* <-- NEW ROUTE */}
         
         {/* Detail Page Route */}
-        <Route path="/recipe/:id" element={<RecipeDetail />} />
+        <Route path="/add" element={<AddRecipeForm />} />
       </Routes>
     </Router>
   );
