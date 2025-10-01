@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import HomePage from './components/HomePage';
-// Explicitly using the .jsx extension helps resolve module issues
 import RecipeDetail from './components/RecipeDetail.jsx'; 
+import AddRecipeForm from './components/AddRecipeForm'; // <-- NEW IMPORT
 
 function App() {
   return (
@@ -12,7 +12,10 @@ function App() {
         {/* Home Page Route */}
         <Route path="/" element={<HomePage />} />
         
-        {/* Detail Page Route with Dynamic ID */}
+        {/* Add Recipe Form Route */}
+        <Route path="/add" element={<AddRecipeForm />} /> {/* <-- NEW ROUTE */}
+        
+        {/* Detail Page Route */}
         <Route path="/recipe/:id" element={<RecipeDetail />} />
       </Routes>
     </Router>
