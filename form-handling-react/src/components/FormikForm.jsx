@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
-import * as Yup from 'yup'; // Import Yup for schema validation
+import * as Yup from 'yup';
 
 // 1. Define the Validation Schema using Yup
 const RegistrationSchema = Yup.object().shape({

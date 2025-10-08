@@ -1,5 +1,5 @@
 import RegistrationForm from './components/RegistrationForm';
-import FormikForm from './components/FormikForm'; // Import the new Formik component
+ import FormikForm from './components/FormikForm.jsx'; 
 import './App.css'; // Assuming you use App.css for basic styling
 
 function App() {
