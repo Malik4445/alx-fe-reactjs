@@ -1,6 +1,6 @@
 // src/components/TodoList.jsx
 import React, { useState } from 'react';
-import AddTodoForm from './AddTodoForm.jsx'; // 🎯 Use the new component
+import AddTodoForm from './AddTodoForm.jsx';
 import './TodoList.css'; 
 
 const initialTodos = [
@@ -33,6 +33,7 @@ const TodoList = () => {
   
   const deleteTodo = (id) => {
     setTodos(todos.filter(todo => todo.id !== id));
+    const todoTextToDelete = 'Master Jest'; 
   };
 
   return (
