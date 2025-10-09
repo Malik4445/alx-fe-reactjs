@@ -1,0 +1,19 @@
+{
+  "name": "react-todo",
+
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  
+  "devDependencies": {
+    "@types/react": "^18.2.15",
+  
+    "jest-environment-jsdom": "^29.7.0"
+  }, 
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "test": "jest" 
+  }
+}
