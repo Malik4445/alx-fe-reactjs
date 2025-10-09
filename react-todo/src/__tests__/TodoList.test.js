@@ -1,9 +1,8 @@
 // src/__tests__/TodoList.test.js
 import React from 'react';
-// Checkers often look for 'screen' and 'fireEvent' in this import line.
 import { render, screen, fireEvent } from '@testing-library/react'; 
-import '@testing-library/jest-dom';
-import TodoList from '../components/TodoList';
+import '@testing-library/jest-dom'; 
+import TodoList from '../components/TodoList.jsx'; 
 
 describe('TodoList Component', () => {
 
