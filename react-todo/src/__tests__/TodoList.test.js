@@ -45,21 +45,20 @@ describe('TodoList Component', () => {
     expect(todoItem).toHaveStyle('text-decoration: line-through');
   });
 
-  // Test 4: Deleting Todos (uses fireEvent)
+  // Test 4: Test Deleting Todos (Simplest form of regex match)
   test('allows the user to delete a todo item', () => {
     render(<TodoList />);
     
-    const todoTextToDelete = 'Master Jest'; 
+    // Simplest Regex for the item text
+    const todoTextToDelete = /Master Jest/i; 
     
-    const todoItem = screen.getByText(todoTextToDelete);
+    // Simplest form of the aria-label name search
+    // We are looking for a button whose name contains "Delete Master Jest"
+    const deleteButton = screen.getByRole('button', { name: /Delete Master Jest/i });
     
-    // Uses screen.getByRole
-    const deleteButton = screen.getByRole('button', { name: `Delete ${todoTextToDelete}` });
-    
-    // Uses fireEvent.click
     fireEvent.click(deleteButton);
     
-    // Checks that the item is no longer in the document
-    expect(todoItem).not.toBeInTheDocument();
+    // Check using queryByText and the original regex
+    expect(screen.queryByText(todoTextToDelete)).not.toBeInTheDocument();
   });
 });
