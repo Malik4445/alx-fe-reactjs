@@ -1,8 +1,10 @@
 // src/components/TodoList.jsx
 import React, { useState } from 'react';
-import './TodoList.css'; // Assuming you'll add some CSS
+import AddTodoForm from './AddTodoForm.jsx'; // 🎯 Use the new component
+import './TodoList.css'; 
 
 const initialTodos = [
+  // ... initialTodos are the same ...
   { id: 1, text: 'Learn React Testing Library', completed: false },
   { id: 2, text: 'Master Jest', completed: true },
   { id: 3, text: 'Build a Todo List', completed: false },
@@ -10,31 +12,25 @@ const initialTodos = [
 
 const TodoList = () => {
   const [todos, setTodos] = useState(initialTodos);
-  const [newTodo, setNewTodo] = useState('');
 
-  // Handler for adding a new todo
-  const addTodo = (e) => {
-    e.preventDefault();
-    if (!newTodo.trim()) return;
-
+  // Updated addTodo to accept only the text
+  const addTodo = (text) => {
     const newId = Math.max(...todos.map(t => t.id), 0) + 1;
     const todoItem = {
       id: newId,
-      text: newTodo.trim(),
+      text: text,
       completed: false,
     };
     setTodos([...todos, todoItem]);
-    setNewTodo('');
   };
-
-  // Handler for toggling completion status
+  
+  // toggleTodo and deleteTodo remain the same (as provided in previous answers)
   const toggleTodo = (id) => {
     setTodos(todos.map(todo =>
       todo.id === id ? { ...todo, completed: !todo.completed } : todo
     ));
   };
-
-  // Handler for deleting a todo
+  
   const deleteTodo = (id) => {
     setTodos(todos.filter(todo => todo.id !== id));
   };
@@ -43,27 +39,18 @@ const TodoList = () => {
     <div className="todo-list-container">
       <h1>Todo List</h1>
 
-      {/* AddTodoForm implementation */}
-      <form onSubmit={addTodo}>
-        <input
-          type="text"
-          value={newTodo}
-          onChange={(e) => setNewTodo(e.target.value)}
-          placeholder="Add new todo..."
-          aria-label="New todo item"
-        />
-        <button type="submit">Add</button>
-      </form>
+      {/* 🎯 Use the separated component and pass the handler */}
+      <AddTodoForm addTodo={addTodo} /> 
 
-      {/* Todo list display */}
+      {/* Todo list display (unchanged) */}
       <ul className="todos">
         {todos.map(todo => (
+          // ... list item structure remains the same ...
           <li 
             key={todo.id}
             data-testid={`todo-item-${todo.id}`}
             className={todo.completed ? 'completed' : ''}
           >
-            {/* Toggling functionality */}
             <span 
               onClick={() => toggleTodo(todo.id)} 
               style={{ cursor: 'pointer', textDecoration: todo.completed ? 'line-through' : 'none' }}
@@ -71,8 +58,6 @@ const TodoList = () => {
             >
               {todo.text}
             </span>
-            
-            {/* Deleting functionality */}
             <button 
               onClick={() => deleteTodo(todo.id)} 
               aria-label={`Delete ${todo.text}`}
