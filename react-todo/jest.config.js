@@ -3,7 +3,8 @@ export default {
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/setupTests.js'],
   transform: {
-    '^.+\\.jsx?$': 'babel-jest', // Use babel-jest for JSX/ESM support
+    // This line tells Jest to process .jsx and .js files using babel-jest
+    '^.+\\.jsx?$': 'babel-jest', 
   },
   moduleNameMapper: {
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
