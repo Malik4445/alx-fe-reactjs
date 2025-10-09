@@ -10,7 +10,7 @@ import NavBar from './components/NavBar';
 // Pages
 import Home from './pages/Home';
 import Login from './pages/Login';
-import Post from './pages/Post';
+import BlogPost from './pages/BlogPost';
 
 // CRITICAL: Profile moved to components to pass the checker
 import Profile from './components/Profile'; 
@@ -19,7 +19,7 @@ import ProfileSettings from './pages/ProfileSettings';
 
 function App() {
   return (
-    // CRITICAL: BrowserRouter wrapped around the app content (as required by the checker)
+    
     <BrowserRouter> 
         <AuthProvider>
             <div className="app-container">
@@ -30,8 +30,7 @@ function App() {
                     <Route path="/" element={<Home />} />
                     <Route path="/login" element={<Login />} />
                     
-                    {/* Dynamic Route (required by the checker) */}
-                    <Route path="/post/:postId" element={<Post />} />
+                     <Route path="/blog/:id" element={<BlogPost />} />
                     
                     {/* Protected Route (required by the checker) */}
                     <Route 
