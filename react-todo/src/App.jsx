@@ -1,11 +1,14 @@
 // src/App.jsx
-import React from 'react';
+
+// 🎯 Add the explicit React import to satisfy strict checkers
+import React from 'react'; 
 import TodoList from './components/TodoList'; 
+// import './App.css'; // Keep commented out or remove for simplicity
 
 function App() {
   return (
-    // Simplify the return to the minimum required element
-    <div style={{ padding: '20px' }}>
+    // Keep the rendering simple and correct
+    <div className="App"> 
       <TodoList /> 
     </div>
   );
