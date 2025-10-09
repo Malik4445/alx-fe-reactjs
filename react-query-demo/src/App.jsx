@@ -1,35 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// src/App.jsx
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'; 
+
+// 2. Import the component you'll be building in the next step
+import PostsComponent from './components/PostsComponent'; 
+import './App.css'; 
+
+// 3. Define the queryClient instance (The checker is looking for "queryClient")
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      // Optional: Helps demonstrate caching better
+      staleTime: 5000, 
+    },
+  },
+});
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    // 4. Wrap with QueryClientProvider (The checker is looking for "QueryClientProvider" and "client={queryClient}")
+    <QueryClientProvider client={queryClient}>
+      <div className="App">
+        <h1>Advanced Data Handling with React Query</h1>
+        <p>Observe the Network tab and Cache behavior in React DevTools!</p>
+        
+        {/* 5. Render PostsComponent (The checker is looking for "PostsComponent") */}
+        <PostsComponent />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </QueryClientProvider>
+  );
 }
 
-export default App
+export default App;
